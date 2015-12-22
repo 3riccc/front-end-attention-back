@@ -1,6 +1,7 @@
 <?php
 	header('Access-Control-Allow-Origin: *');
 	$key = $_GET['key'];
+	// 别了对这个key做sql注入过滤
 	// 这里是一些查询逻辑
 
 
