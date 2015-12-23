@@ -1,10 +1,15 @@
 <?php
-	header('Access-Control-Allow-Origin: *');
-	$key = $_GET['key'];
-	// 别了对这个key做sql注入过滤
-	// 这里是一些查询逻辑
+header('Access-Control-Allow-Origin: *');
+$key = $_GET['key'];
+// 别忘了对这个key做sql注入过滤
+// 这里是一些查询逻辑
+require_once('comm.php');
+$result = mysql_query('select id,title,author,time,abstract,tag from papers where title like "%'.$key.'%" ORDER BY id DESC');
 
+$arr = array();
+while($row = mysql_fetch_array($result))
+  {
+  	$arr[]=$row;
+  }
 
-
-	$listArr = array(array('id'=>0,'title'=>'查询结果1','author'=>'张三'),array('title'=>'查询结果二','author'=>'李四','id'=>1),array('title'=>'结果三','id'=>-1,'author'=>'作者的名字很长很长很长很长城'));
-	echo json_encode(listArr);
+echo json_encode($arr);

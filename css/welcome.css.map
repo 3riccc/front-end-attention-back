@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAQ,CACP,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,QAAQ,CAAE,QAAQ,CAClB,IAAI,CAAE,GAAG,CACT,GAAG,CAAE,GAAG,CACR,gBAAO,CACN,MAAM,CAAC,IAAI",
+"sources": ["welcome.scss"],
+"names": [],
+"file": "welcome.css"
+}
